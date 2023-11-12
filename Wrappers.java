@@ -5,27 +5,23 @@ package Wrappers;
  */
 
 public class Wrappers {
+
     public static void main(String[] args) {
-        int resultado = Exemplo1();
-        Exemplo_Casting(resultado);
+        int resultadoExemplo = exemplo();
+        exemplo2(resultadoExemplo);
     }
 
-    private static int Exemplo1() {
-        int num1 = 15;
-        int num2 = 20;
-
-        int resultado = num1 + num2;
-
-        System.out.println("num1: " + num1);
-        System.out.println("num2: " + num2);
-        System.out.println("Resultado: " + resultado);
-
-        return resultado;
+    private static int exemplo() {
+        int num = 65;
+        System.out.println("Exemplo: " + num);
+        return num;
     }
 
-    private static void Exemplo_Casting(int resultado) {
-        short casting = (short) resultado;
+    private static Float exemplo2(int valor) {
+        Float wrapperFloat = (float) valor; // Converte o valor inteiro para Float.
+        System.out.println("Exemplo2: Convertendo para Float: " + wrapperFloat);
+        return wrapperFloat;
 
-        System.out.println("Resultado com casting para short: " + casting);
+
     }
 }
